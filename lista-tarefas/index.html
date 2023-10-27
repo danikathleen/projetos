@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <h1>Minha Lista de Tarefas</h1>
+    <input type="text" id="tarefa" placeholder="Adicione uma tarefa">
+    <button onclick="adicionarTarefa()">Adicionar</button>
+    <ul id="lista-tarefas">
+    </ul>
+
+    
+
+   
+<script>
+       
+
+
+
+        function adicionarTarefa() {
+            var tarefaInput = document.getElementById("tarefa");
+            var tarefaText = tarefaInput.value;
+            if (tarefaText === "") {
+                alert("Por favor, digite uma tarefa.");
+                return;
+            }
+
+            var listaTarefas = document.getElementById("lista-tarefas");
+            var novaTarefa = document.createElement("li");
+            novaTarefa.textContent = tarefaText;
+            listaTarefas.appendChild(novaTarefa);
+
+            tarefaInput.value = ""; // Limpa o campo de entrada
+        }
+    </script>
+</body>
+
+</
+</html>
